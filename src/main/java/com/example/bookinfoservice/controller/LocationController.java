@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.bookinfoservice.repository.LocationRepository;
 
+import java.util.List;
+
 @RestController
 public class LocationController {
     @Autowired
@@ -16,5 +18,9 @@ public class LocationController {
         return locationRepository.findByLocationId(locationId);
     }
 
+    @GetMapping("/locations/")
+    public List<Location> getAllLocations(){
+        return locationRepository.findAll();
+    }
 }
 
