@@ -1,17 +1,18 @@
 package com.example.bookinfoservice.model;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
+@Entity
+@Table(name="location")
 public class Location {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int locationId;
     private String name;
 
-    /*public Location(int locationId, String name) {
+    public Location(int locationId, String name) {
         this.locationId = locationId;
         this.name = name;
-    }*/
+    }
 
     public Location() {
     }
