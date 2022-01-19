@@ -1,22 +1,19 @@
-package com.example.ciapi.model;
-
-import javax.persistence.*;
-
-@Entity
+package com.example.bookinfoservice.model;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 public class Location {
-
-    @locationId
+    @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int locationId;
-
     private String name;
 
-    public Influencer() {
-    }
-
-    public Location(int locationId, String name) {
+    /*public Location(int locationId, String name) {
         this.locationId = locationId;
         this.name = name;
+    }*/
+
+    public Location() {
     }
 
     public int getLocationId() {
