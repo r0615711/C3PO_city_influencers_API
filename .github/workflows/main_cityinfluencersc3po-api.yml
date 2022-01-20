@@ -56,4 +56,4 @@ jobs:
           app-name: 'cityinfluencersc3po-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D59F69772EFA4AA69AEF9EA156540543 }}
-          package: ./book-service-info-ex
+          package: ./book-service-info-ex/src/main/java/com/example/bookinfoservice
