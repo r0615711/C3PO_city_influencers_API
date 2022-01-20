@@ -20,12 +20,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11'
-
-      - name: Build with Maven
-        run: mvn clean install
         
       - name: Zip artifact for deployment
         run: zip release.zip ./book-service-info-ex -r
+        
+      - name: Build with Maven
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
